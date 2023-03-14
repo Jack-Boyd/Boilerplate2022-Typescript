@@ -1,0 +1,9 @@
+# Set the default behaviour, in case people don't have cofre.autocrlf set.
+* text eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary
+*.woff binary
+*.scss -text
+*.gif binary
+package-lock.json binary

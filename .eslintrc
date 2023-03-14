@@ -1,0 +1,68 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {},
+      "webpack": {
+        "config": "webpack/_common.js"
+      }
+    }
+  },
+  "rules": {
+    "label-has-for": "off",
+    "prefer-destructuring": "off",
+    "prefer-template": "off",
+    "react/jsx-filename-extension": "off",
+    "react/require-default-props": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/prefer-stateless-function": "off",
+    "arrow-parens": "off",
+    "arrow-body-style": "off",
+    "no-return-assign": "off",
+    "no-mixed-operators": "off",
+    "arrow-params": "off",
+    "no-proto": "off",
+    "jsx-a11y/label-has-for": "off",
+    "object-curly-newline": "off",
+    "global-require": "off",
+    "no-continue": "off",
+    "no-nested-ternary": "off",
+    "comma-dangle": "off",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0}],
+    "no-restricted-syntax": "off",
+    "no-param-reassign": "off",
+    "no-use-before-define": "off",
+    "no-throw-literal": "off",
+    "prefer-promise-reject-errors": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "brace-style": [2, "stroustrup", { "allowSingleLine": false }],
+    "max-len": 0,
+    "no-trailing-spaces": 0,
+    "linebreak-style": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "function-paren-newline": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "import",
+    "jest",
+    "react-hooks"
+  ]
+}

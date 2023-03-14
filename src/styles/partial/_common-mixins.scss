@@ -1,0 +1,89 @@
+@import "./variables";
+@import "./media-queries";
+@import "./browsers";
+
+@keyframes FADE_IN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+$font-size-base: 16px;
+
+@mixin font-size($sizeValue: 1, $extra: "") {
+  font-size: $sizeValue * $font-size-base unquote($extra);
+  font-size: unquote($sizeValue + "rem");
+}
+
+@mixin non-touch-devices-only {
+  body:not(.touch-only) & {
+    @content;
+  }
+}
+
+@mixin hover-and-active {
+  &.active,
+  &:active {
+    @content;
+  }
+
+  @include non-touch-devices-only {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin active {
+  &.active,
+  &:active {
+    @content;
+  }
+}
+
+@mixin hover {
+  @include non-touch-devices-only {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin transition-1($include: all, $duration: 150ms) {
+  transition: $duration ease-in-out $include !important;
+}
+
+@mixin transition-2($include) {
+  transition: 150ms ease-in-out all !important;
+  transition-property: $include;
+}
+
+@mixin white-box {
+  background: $neutral-white;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+}
+
+@mixin table-rounded($radius) {
+  thead {
+    th:first-child {
+      border-radius: $radius 0 0 0;
+    }
+    th:last-child {
+      border-radius: 0 $radius 0 0;
+    }
+  }
+  tbody {
+    tr:last-child {
+      td:first-child {
+        border-radius: 0 0 0 $radius;
+      }
+      td:last-child {
+        border-radius: 0 0 $radius 0;
+      }
+    }
+  }
+}

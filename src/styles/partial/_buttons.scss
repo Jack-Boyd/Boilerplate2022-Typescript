@@ -1,0 +1,43 @@
+@import "./common-mixins";
+
+@mixin buttons {
+  button,
+  input[type="submit"],
+  input[type="button"],
+  a[type="text"] {
+    @content;
+  }
+}
+
+@mixin immediate-buttons {
+  > button,
+  > input[type="submit"],
+  > input[type="button"] {
+    @content;
+  }
+}
+
+@mixin transparent-button {
+  @include transition-1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: $tertiary;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+  line-height: normal;
+
+  @include hover-and-active {
+    color: $tertiary;
+    background-color: transparent;
+    border: none;
+  }
+
+  &:disabled {
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+} ;

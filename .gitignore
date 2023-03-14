@@ -1,0 +1,17 @@
+*.html~
+*.css~
+*.js~
+*.less~
+*.json~
+.settings/
+junit.xml
+test-report.html
+yarn-error.log
+npm-debug.log
+node_modules/
+dist/
+coverage/
+.vs/
+.DS_Store
+**/.DS_Store
+.idea/

@@ -1,0 +1,88 @@
+@import "../partial/variables";
+@import "../partial/common-mixins";
+@import "../partial/media-queries";
+
+h1 {
+  @include font-size(2);
+  line-height: 38px;
+  font-family: $font-2;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+h2 {
+  @include font-size(1.5);
+  font-family: $font-2;
+  font-weight: normal;
+  color: $tertiary;
+  margin: 16px 0;
+}
+
+h3 {
+  @include font-size(1.125);
+  font-family: $font-2;
+  font-weight: normal;
+  color: $tertiary;
+  margin: 16px 0;
+}
+
+h4 {
+  @include font-size(1);
+  font-family: $font-2;
+  font-weight: normal;
+  color: $tertiary;
+  margin: 16px 0;
+}
+
+h5 {
+  @include font-size(0.875);
+  color: $tertiary;
+}
+
+h6 {
+  @include font-size(0.75);
+  color: $tertiary;
+}
+
+p {
+  @include font-size(1);
+  color: $tertiary;
+  margin: 16px 0;
+}
+
+a,
+.link {
+  //@include font-size(1);
+  color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+
+  font-size:hover-and-active {
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    text-decoration: none;
+  }
+}
+
+.breadcrumb {
+  @include font-size(0.625); // 10
+}
+
+.lead-text {
+  @include font-size(1.75); // 28
+}
+
+.quote {
+  @include font-size(1.25); // 20
+}
+
+small,
+.small {
+  @include font-size(0.625); // 10
+}
+
+.text-small {
+  @include font-size(0.813); //13
+}

@@ -1,0 +1,32 @@
+@import "../partial/common-mixins";
+
+table {
+  border: none;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+td,
+th {
+  font-weight: normal;
+  padding: 7px;
+  vertical-align: middle !important;
+  text-align: left;
+
+  &:first-child {
+    padding-left: 15px;
+  }
+}
+
+th {
+  font-family: $font-2;
+}
+
+td {
+  font-family: $font-1;
+  padding: 10px;
+  white-space: nowrap;
+}
