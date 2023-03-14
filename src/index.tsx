@@ -3,8 +3,12 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import moment from 'moment-timezone';
 
-import AppComponent from './app';
-import { store } from '../store/store';
+import { store } from './store/store';
+import Counter from './modules/counter/counter';
+
+import '~/styles/fonts/fredoka/bold/bold.css';
+import '~/styles/fonts/fredoka/regular/regular.css';
+import '~/styles/_index.scss';
 
 moment.tz.setDefault('Pacific/Auckland');
 
@@ -22,7 +26,7 @@ const root = createRoot(container);
 root.render(
   <StrictMode>
     <Provider store={store}>
-      <AppComponent />
+      <Counter />
     </Provider>
   </StrictMode>,
 );

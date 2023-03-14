@@ -7,7 +7,7 @@ module.exports = {
   devtool: "source-map",
   entry: {
     app: [
-      './src/app/index.tsx'
+      './src/index.tsx'
     ],
   },
   module: {
